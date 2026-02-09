@@ -1,0 +1,123 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+nav#menuItems{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  padding: 0;
+  background: #000;
+}
+
+main{
+  margin-left: 220px;
+}
+
+header{
+  background: red;
+  padding: 40px 0;
+  text-align: center;
+}
+
+header p{
+  margin: 0;
+  font-size: 48px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#menuItems button{
+  width: 100%;
+  border: 2px solid #000;
+  background: blue;
+  color: #fff;
+  font-size: 22px;
+  padding: 18px 10px;
+  cursor: pointer;
+}
+
+#menuItems button:hover{
+  background: goldenrod;
+  color: #000;
+}
+
+#jumpMenu{
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  background: goldenrod;
+  border-bottom: 2px solid #000;
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover{
+  display: block;
+}
+
+#jumpMenu a{
+  display: block;
+  padding: 6px 14px;
+  text-decoration: none;
+  color: blue;
+  font-size: 20px;
+}
+
+#jumpMenu a:hover{
+  background: blue;
+  color: #fff;
+}
+
+h1{
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 48px;
+  margin: 30px 0;
+}
+
+#container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  padding: 20px 40px 60px;
+}
+
+article{
+  width: 260px;
+  color: #b5b5b5;
+  transition: color 2s, transform 2s;
+  transform: scale(1);
+}
+
+article:hover{
+  color: #333;
+  transform: scale(1.1);
+}
+
+article > p:first-of-type::first-letter{
+  font-family: "Times New Roman", Times, serif;
+  font-size: 36px;
+  line-height: 1;
+}
+
+article a[href*="google.com"]{
+  position: relative;
+}
+
+article a[href*="google.com"]::after{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  vertical-align: middle;
+  background-image: url("arrowarrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
