@@ -28,7 +28,7 @@ header{
 header p{
   margin: 0;
   font-size: 48px;
-  font-family: "Times New Roman", Times, serif;
+  font-family: Arial, Times, serif;
 }
 
 #menuItems button{
@@ -113,11 +113,11 @@ article a[href*="google.com"]{
 article a[href*="google.com"]::after{
   content: "";
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-left: 10px;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
   vertical-align: middle;
-  background-image: url("arrowarrow.png");
+  background-image: url("arrow.png");
   background-size: contain;
   background-repeat: no-repeat;
 }
